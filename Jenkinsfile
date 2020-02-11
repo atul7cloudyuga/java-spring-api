@@ -10,7 +10,7 @@ podTemplate(
         hostPathVolume(hostPath: '/root/.m2', mountPath: '/root/.m2')
     ]
 ) {
-    node('slave-pod') {
+    node('master') {
         def commitId
         stage ('Extract') {
             checkout scm
